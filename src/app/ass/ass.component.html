@@ -1,0 +1,25 @@
+<div class="glyphicon"
+[ngClass]="{
+  'glyphicon-star':isSelected,
+  'glyphicon-star-empty':!isSelected
+}"
+(click)="onClick()"></div>
+<div><button 
+[style.background-color]="canSave ?'pink':'orange'"
+[style.color]="canSave ?'red':'blue'"
+[style.fontWeight]="canSave?'bold':'normal'">save</button>
+</div>
+<div>
+<button
+[ngStyle]="{
+    'background-color':canSave ? 'blue':'grey' ,
+    'color':canSave ?'red':'green',
+    'fontWeight':canSave?'bold':'normal'
+}"
+>
+save </button>
+<app-ex [title]="title">
+    shipping details content
+</app-ex>
+
+
