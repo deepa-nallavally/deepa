@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class AssComponent implements OnInit {
   isSelected=true;
   canSave=false;
-  title="Shipping Details";
-
   
   constructor() { }
 
