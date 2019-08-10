@@ -1,0 +1,17 @@
+<form #fo="ngForm" (ngSubmit)="submit(fo)">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input required maxlength="5" minlength="3" pattern="good" ngModel name="firstName" id="firstName" #firstName="ngModel" (change)="log(firstName)" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors.required">firstName is required</div>
+            <div *ngIf="firstName.errors.maxlength">max length is 5</div>
+            <div *ngIf="firstName.errors.minlength">minimum length is {{firstName.errors.minlength.requiredLength}}</div>
+            <div *ngIf="firstName.errors.pattern">pattern is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="comment">comment</label>
+        <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary">submit</button>
+</form>
