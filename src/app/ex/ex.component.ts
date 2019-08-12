@@ -9,7 +9,7 @@ export class ExComponent implements OnInit {
 @Input() title:string;
 
 
-isExpanded=true;
+isExpanded=false;
 
   constructor() { }
 
