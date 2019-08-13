@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templateform.component.scss']
 })
 export class TemplateformComponent implements OnInit {
+  contactMethods=[
+    {id:1,name:'email'},
+    {id:2,name:'phone'},
+  ];
   log(x){
     console.log(x);
   }
