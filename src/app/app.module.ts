@@ -9,6 +9,7 @@ import { ExComponent } from './ex/ex.component';
 import { CustomdirDirective } from './customdir.directive';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { CoursesformComponent } from './coursesform/coursesform.component';
+import { PasswordComponent } from './password/password.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CoursesformComponent } from './coursesform/coursesform.component';
     CustomdirDirective,
     ReactiveComponent,
     CoursesformComponent,
+    PasswordComponent,
   
   ],
   imports: [
