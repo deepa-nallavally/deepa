@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RequestComponent } from './request/request.component';
+import { SampleserviceService } from './services/sampleservice.service';
+
 
 
 @NgModule({
@@ -15,9 +17,9 @@ import { RequestComponent } from './request/request.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [SampleserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

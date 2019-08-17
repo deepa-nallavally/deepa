@@ -1,8 +1,19 @@
-<ul *ngFor="let data of datas">
-    <li>
-      {{data.userId}}
+ 
+ 
+ 
+ 
+ 
+ <input  #title (keyup.enter)="create(title)" class="form-control" >
+
+
+   <ul >
+    <li *ngFor ="let data of datas">
+      <button (click)="updatePost(data)" class="btn btn-default">update</button>
+      {{data.title}}
+      <button (click)="deletePost(data)"
+      class="btn btn-default">delete</button>
     </li>
-    <li>
-        {{data.body}}
-      </li>
-</ul>
+    
+</ul> 
+
+
