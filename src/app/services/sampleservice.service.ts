@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { catchError } from 'rxjs/operators';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +19,6 @@ export class SampleserviceService {
     return this.http.patch(this.Url + '/' + data.id,JSON.stringify({title:true}));
   }
   deletePost(data){
-    return this.http.delete(this.Url+'/'+data.id)
+    return this.http.delete(this.Url+'/'+data.id);
   }
 }
