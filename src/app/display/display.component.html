@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Password</th>
+          </tr>
+      </thead>
+      <tbody *ngFor="let d of da">
+          <tr *ngIf="det.Username!=d.Username">
+            <td>{{ d.Username }}</td>
+            <td>{{ d.Email}}</td>
+            <td>{{ d.PhoneNumber }}</td>
+            <td>{{ d.Password }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

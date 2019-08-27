@@ -1,25 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CrisislistComponent } from './crisislist/crisislist.component';
-import { HerodetailComponent } from './herodetail/herodetail.component';
-import { HerolistComponent } from './herolist/herolist.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { DisplayComponent } from './display/display.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrisislistComponent,
-    HerodetailComponent,
-    HerolistComponent,
-    PagenotfoundComponent
+    FormComponent,
+    LoginComponent,
+    DisplayComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
