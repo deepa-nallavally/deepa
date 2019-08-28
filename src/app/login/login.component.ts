@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   submitDetails(){
     this.service.Details=(this.form.value);
     console.log(this.service.Details);
-    if(this.service.Datas.find(element => element.Username === this.service.Details.Username && element.Password===this.service.Details.Password)){
+    if(this.service.Datas.find(element => element.Username === this.service.Details.Username && element.Password === this.service.Details.Password)){
       return this.router.navigate(['/submit']);
     }else{
       return this.router.navigate(['/login']);

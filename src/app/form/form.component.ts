@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit {
   rform=new FormGroup({
     Username:new FormControl('',Validators.required),
-    Email:new FormControl('',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
+    Email:new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]")]),
     PhoneNumber:new FormControl('',[Validators.required,Validators.pattern("[789][0-9]+"),Validators.maxLength(10)]),
     Password:new FormControl('',[Validators.required]),
     Confirmpassword:new FormControl('',[Validators.required]),

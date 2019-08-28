@@ -1,14 +1,14 @@
 <form [formGroup]="rform" >
     <div class="form-group">
         <label for="username">Username:</label>
-        <input formControlName="Username" type="text" id="username" class="form-Control">
+        <input formControlName="Username" type="text" id="username" placeholder="Username" class="form-Control">
         <div *ngIf="username.touched && username.invalid" >
             <div *ngIf="username.errors.required" class="alert alert-danger">Username Required</div>
         </div>
     </div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input formControlName="Email" type="text" id="email" class="form-Control">
+        <input formControlName="Email" type="text" id="email" placeholder="Email" class="form-Control">
         <div *ngIf="email.touched && email.invalid" >
             <div *ngIf="email.errors.required" class="alert alert-danger">Email Required</div>
             <div *ngIf="email.errors.pattern" class="alert alert-danger">Pattern Required</div>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         <label for="phoneNumber">Phone Number:</label>
-        <input formControlName="PhoneNumber" type="text" id="phoneNumber" class="form-Control">
+        <input formControlName="PhoneNumber" type="text" id="phoneNumber" placeholder="PhoneNumber" class="form-Control">
         <div *ngIf="phoneNumber.touched && phoneNumber.invalid" >
             <div *ngIf="phoneNumber.errors.required" class="alert alert-danger">PhoneNumber Required</div>
             <div *ngIf="phoneNumber.errors.pattern" class="alert alert-danger">Pattern Required</div>
@@ -26,14 +26,14 @@
     </div>
     <div class="form-group">
         <label for="password">Password:</label>
-        <input formControlName="Password" type="text" id="password" class="form-Control">
+        <input formControlName="Password" type="text" id="password" placeholder="Password" class="form-Control">
         <div *ngIf="password.touched && password.invalid" >
             <div *ngIf="password.errors.required" class="alert alert-danger">Password Required</div>
         </div>
     </div>
     <div class="form-group">
         <label for="confirmpassword">Confirmpassword:</label>
-        <input formControlName="Confirmpassword" type="text" id="confirmpassword" class="form-Control">
+        <input formControlName="Confirmpassword" type="text" id="confirmpassword" placeholder="Confirmpassword" class="form-Control">
         <div *ngIf="confirmpassword.touched && confirmpassword.invalid" >
             <div *ngIf="confirmpassword.errors.required" class="alert alert-danger">Confirmpassword Required</div>
         </div>
@@ -41,6 +41,6 @@
     <div *ngIf="rform.invalid && rform.errors && rform.errors.passwordMatch" class="alert alert-danger">Passwords Should Match</div>
     <div>
         <button (click)="onLogin()" type="button">Login</button>
-        <button (click)="getData()" type="button">Register</button>
+        <button (click)="getData()" [disabled]="!rform.valid" type="button">Register</button>
     </div> 
 </form>
